@@ -12,12 +12,12 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    deleteUser: (state, action) => {
+    deleteUser: (state, {payload}) => {
     // return {
     //   ...state,
     //   users: state.users.filter((user) => user.id !== action.payload),
     // }
-    state.users = state.users.filter((user) => user.id !== action.payload);
+    state.users = state.users.filter((user) => user.id !== payload);
     },
   },
 });
